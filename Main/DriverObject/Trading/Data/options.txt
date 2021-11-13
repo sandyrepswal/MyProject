@@ -1,0 +1,74 @@
+for specific expiry date
+	get strike price
+	vix
+	OI
+	change in OI
+
+for each strike price
+	get values for range -1.5 to +1.5 based on black scholes formula
+
+for same expiry date options
+	for same lot size
+		get the combination which will generate max profit across the range
+		get the combination which will generate no loss
+
+	for same amount
+		get the combination which will generate max profit across the range
+		get the combination which will generate no loss
+
+
+
+for different expiry date options
+	for same lot size
+		get the combination which will generate max profit across the range
+		get the combination which will generate no loss
+
+	for same amount
+		get the combination which will generate max profit across the range
+		get the combination which will generate no loss
+
+compare with next day results to confirm the analysis.
+
+
+get data based on underlying value of same day at arnd 9.55
+get data for same expiry date
+
+create maping of option and zerodha security identity
+add poptions as watch list
+
+get buy price at 10 for options
+get sell price at 2.55
+calculate pnl
+
+
+get buy price at 11 for options
+get sell price at 2.55
+calculate pnl
+
+
+get buy price at 12 for options
+get sell price at 2.55
+calculate pnl
+
+get data for option held for multiple days, profit after 1 day 2 day and so on
+
+
+Market up scenario
+put strike 	min
+call strike 	min
+min profit spot	closest to nifty
+
+
+ Based on whether market is bullish : call or bearish :put
+ sort by call price ascending and identify price which has increased least, avoid 0
+sort desc by put price , identify price which has increased most
+choose the strile which has min profit spot closer to current market price
+
+
+Identify the diretion
+sort call and put change data
+if direction is positive, that means put prices will fall, so identify put with highest +ve change
+	try to find a call with an equivalent change(in terms of points)
+if direction is negative , means call prices will fall, so identify call with highest change
+	try to find a put with equivalent change
+

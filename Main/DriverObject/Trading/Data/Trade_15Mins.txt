@@ -1,0 +1,25 @@
+// This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © sandyrepswal
+
+//@version=4
+strategy("My Script")
+startDate = input(title="Start Date", type=input.integer,
+     defval=1, minval=1, maxval=31)
+startMonth = input(title="Start Month", type=input.integer,
+     defval=1, minval=1, maxval=12)
+startYear = input(title="Start Year", type=input.integer,
+     defval=2021, minval=1800, maxval=2100)
+
+endDate = input(title="End Date", type=input.integer,
+     defval=1, minval=1, maxval=31)
+endMonth = input(title="End Month", type=input.integer,
+     defval=15, minval=1, maxval=12)
+endYear = input(title="End Year", type=input.integer,
+     defval=2021, minval=1800, maxval=2100)
+
+inDateRange = (time >= timestamp(syminfo.timezone, startYear,
+         startMonth, startDate, 0, 0)) and
+     (time < timestamp(syminfo.timezone, endYear, endMonth, endDate, 0, 0))
+if (inDateRange)     
+    strategy.order("Buy",true,1,when=((minute==15)or(minute==30)or(minute==45))and(hour<15))
+    strategy.close_all(when=(hour==15))

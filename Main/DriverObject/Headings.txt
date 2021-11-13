@@ -1,0 +1,9 @@
+Price Scans
+Monitor significant price movements, patterns/ breaching of threshold.
+LD
+Previous Day Breakout Scans
+Closing Above Previous High
+https://web.stockedge.com/scan/2013
+Closing Below Previous Low
+https://web.stockedge.com/scan/2014
+Last Week Breakout Scans
